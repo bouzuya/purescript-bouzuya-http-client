@@ -35,7 +35,7 @@ body :: Option FetchOptions String
 body = opt "body"
 
 defaults :: Options FetchOptions
-defaults = defaultToOptions "method" Method.GET
+defaults = defaultToOptions "method" (show Method.GET)
 
 headers :: Option FetchOptions (Object String)
 headers = opt "headers"
