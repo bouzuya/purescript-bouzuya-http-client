@@ -1,0 +1,24 @@
+{
+  "name": "purescript-bouzuya-http-client",
+  "description": "HTTP client",
+  "version": "0.0.0",
+  "author": {
+    "name": "bouzuya",
+    "email": "m@bouzuya.net",
+    "url": "https://bouzuya.net/"
+  },
+  "bugs": {
+    "url": "https://github.com/bouzuya/purescript-bouzuya-http-client/issues"
+  },
+  "homepage": "https://github.com/bouzuya/purescript-bouzuya-http-client#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouzuya/purescript-bouzuya-http-client.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
