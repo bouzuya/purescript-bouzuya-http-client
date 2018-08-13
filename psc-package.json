@@ -6,6 +6,7 @@
     "aff",
     "aff-promise",
     "bouzuya-http-method",
+    "bouzuya-http-status-code",
     "effect",
     "options",
     "prelude",
