@@ -12,5 +12,6 @@ main :: Effect Unit
 main = launchAff_ do
   liftEffect (log "Hello")
   let options = url := "https://bouzuya.net/"
-  response <- fetch options
-  liftEffect (logShow response)
+  { body, status } <- fetch options
+  liftEffect (logShow body)
+  liftEffect (logShow status)
