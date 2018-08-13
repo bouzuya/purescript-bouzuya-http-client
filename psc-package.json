@@ -3,7 +3,11 @@
   "set": "bouzuya-20180812",
   "source": "https://github.com/bouzuya/package-sets.git",
   "depends": [
+    "aff",
+    "aff-promise",
+    "bouzuya-http-method",
     "effect",
+    "options",
     "prelude",
     "psci-support"
   ]

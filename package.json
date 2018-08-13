@@ -27,6 +27,7 @@
     "postinstall": "psc-package install",
     "psc-package": "psc-package",
     "purs": "purs",
+    "repl": "psc-package sources | xargs purs repl 'src/**/*.purs'",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
