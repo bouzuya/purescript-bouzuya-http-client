@@ -3,6 +3,8 @@
   "set": "bouzuya-20180812",
   "source": "https://github.com/bouzuya/package-sets.git",
   "depends": [
-    "prelude"
+    "effect",
+    "prelude",
+    "psci-support"
   ]
 }
