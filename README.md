@@ -1,5 +1,7 @@
 # purescript-bouzuya-http-client
 
+`Bouzuya.HTTP.Client` module
+
 ## License
 
 [MIT](LICENSE)
