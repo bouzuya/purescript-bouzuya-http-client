@@ -25,7 +25,11 @@ exports.fetchImpl = function (options) {
           body += chunk;
         });
         response.on('end', function () {
-          resolve({ statusCode: response.statusCode, body: body });
+          resolve({
+            body: body,
+            headers: response.headers,
+            statusCode: response.statusCode
+          });
         });
         response.on('error', function (error) {
           reject(error);
@@ -54,6 +58,10 @@ exports.fetchImpl = function (options) {
       request.end();
     });
   };
+};
+
+exports.headersImpl = function (response) {
+  return response.headers;
 };
 
 exports.textImpl = function (response) {

@@ -11,6 +11,7 @@ import Prelude (Unit, bind, discard)
 main :: Effect Unit
 main = launchAff_ do
   let options = url := "https://bouzuya.net/"
-  { body, status } <- fetch options
+  { body, headers, status } <- fetch options
   liftEffect (logShow body)
+  liftEffect (logShow headers)
   liftEffect (logShow status)

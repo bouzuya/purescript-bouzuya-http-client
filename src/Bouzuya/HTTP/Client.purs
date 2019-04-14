@@ -30,6 +30,8 @@ data FetchResponse
 
 foreign import fetchImpl :: Foreign -> Effect (Promise FetchResponse)
 
+foreign import headersImpl :: FetchResponse -> Object String
+
 foreign import textImpl :: FetchResponse -> String
 
 foreign import statusImpl :: FetchResponse -> Int
@@ -49,7 +51,13 @@ method = cmap show (opt "method")
 url :: Option FetchOptions String
 url = opt "url"
 
-fetch :: Options FetchOptions -> Aff { body :: Maybe String, status :: StatusCode }
+fetch ::
+  Options FetchOptions
+  -> Aff
+    { body :: Maybe String
+    , headers :: Object String
+    , status :: StatusCode
+    }
 fetch opts = do
   promise <- liftEffect (fetchImpl (options (append defaults opts)))
   response <- Promise.toAff promise
@@ -61,5 +69,6 @@ fetch opts = do
         if eq status status204
           then Nothing
           else Just (textImpl response)
+    , headers: headersImpl response
     , status
     }
